@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Activity;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 
 class ActivityController extends Controller
@@ -14,7 +15,8 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        return Activity::All();
+        $activities = Activity::all();
+        return view('activities.index', compact('activities'));
     }
 
     /**
@@ -41,6 +43,7 @@ class ActivityController extends Controller
         ]);
 
         Activity::create($validated);
+        \Illuminate\Support\Facades\Log::info('Actividad creada', $validated);
         return redirect()->route('activities.index')->with('success', 'Activity created');
     }
 
