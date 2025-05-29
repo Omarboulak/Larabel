@@ -1,70 +1,49 @@
-{{-- resources/views/activities/create.blade.php --}}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Crear Actividad</title>
-</head>
-<body>
-    <h1>Crear nueva Actividad</h1>
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <h2>Nueva Actividad</h2>
 
     <form method="POST" action="{{ route('activities.store') }}">
         @csrf
 
-        {{-- Type --}}
-        <label for="type">Tipo</label>
-        <input 
-            type="text" 
-            id="type" 
-            name="type" 
-            value="{{ old('type', 'surf') }}"
-        >
-        <br>
+        <div>
+            <label for="type">Tipo</label>
+            <input type="text" id="type" name="type" placeholder="surf, kayak..." class="form-control">
+        </div>
 
-        {{-- User ID aleatorio --}}
-        <label for="user_id">User ID</label>
-        {{-- rand(1,5) genera un número al azar entre 1 y 5 --}}
-        <input 
-            type="number" 
-            id="user_id" 
-            name="user_id" 
-            value="{{ old('user_id', rand(1,5)) }}" 
-            min="1" 
-            max="5"
-        >
-        <br>
+        <div>
+            <label for="user_id">User ID</label>
+            <input type="number" id="user_id" name="user_id" placeholder="ID de usuario" class="form-control">
+        </div>
 
-        {{-- Fecha y hora --}}
-        <label for="datetime">Fecha y hora</label>
-        <input type="datetime-local" id="datetime" name="datetime" value="{{ old('datetime') }}">
-        <br>
+        <div>
+            <label for="datetime">Fecha y hora</label>
+            <input type="datetime-local" id="datetime" name="datetime" class="form-control">
+        </div>
 
-        {{-- Paid --}}
-        <input type="hidden" name="paid" value="0">
-        <label>
-            <input type="checkbox" name="paid" value="1" {{ old('paid') ? 'checked' : '' }}>
-            Pagado
-        </label>
-        <br>
+        <div>
+            <label>
+                <input type="hidden" name="paid" value="0">
+                <input type="checkbox" name="paid" value="1">
+                Pagado
+            </label>
+        </div>
 
-        {{-- Notes --}}
-        <label for="notes">Notas</label>
-        <textarea id="notes" name="notes">{{ old('notes') }}</textarea>
-        <br>
+        <div>
+            <label for="notes">Notas</label>
+            <textarea id="notes" name="notes" rows="3" class="form-control"></textarea>
+        </div>
 
-        {{-- Satisfaction --}}
-        <label for="satisfaction">Satisfacción (0–10)</label>
-        <input 
-            type="number" 
-            id="satisfaction" 
-            name="satisfaction" 
-            min="0" 
-            max="10" 
-            value="{{ old('satisfaction', 5) }}"
-        >
-        <br>
+        <div>
+            <label for="satisfaction">Satisfacción (0–10)</label>
+            <input type="number" id="satisfaction" name="satisfaction" min="0" max="10" class="form-control">
+        </div>
 
-        <button type="submit">Crear</button>
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a href="{{ route('activities.index') }}" class="btn btn-secondary">Cancelar</a>
+        </div>
     </form>
-</body>
-</html>
+</div>
+@endsection
