@@ -43,7 +43,6 @@ class ActivityController extends Controller
         ]);
 
         Activity::create($validated);
-        \Illuminate\Support\Facades\Log::info('Actividad creada', $validated);
         return redirect()->route('activities.index')->with('success', 'Activity created');
     }
 
