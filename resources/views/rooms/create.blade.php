@@ -4,16 +4,6 @@
 <div class="container">
     <h1>Crear Room</h1>
 
-    @if($errors->any())
-      <div class="alert alert-danger">
-        <ul>
-          @foreach($errors->all() as $msg)
-            <li>{{ $msg }}</li>
-          @endforeach
-        </ul>
-      </div>
-    @endif
-
     <form method="POST" action="{{ route('rooms.store') }}">
         @csrf
 
@@ -33,7 +23,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="photos" class="form-label">Photos (URL)</label>
+            <label for="photos" class="form-label">Photos</label>
             <input type="text" id="photos" name="photos" class="form-control">
         </div>
 
