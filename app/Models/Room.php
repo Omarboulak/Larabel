@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Room extends Model
 {
 
+    protected $primaryKey = 'room_number';
+
     protected $fillable = [ 
         'room_number', 'room_type', 'description', 'photos', 'offer', 'price', 'discount', 'cancellation_policy', 'amenities',
     ];

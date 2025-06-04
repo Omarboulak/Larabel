@@ -70,7 +70,7 @@ class RoomController extends Controller
     public function update(Request $request, Room $room): RedirectResponse
     {
         $validated = $request->validate([
-            'room_number' => 'required|integer|unique:rooms,room_number,' . $room->room_number . ',room_number',
+            'room_number' => 'required|integer|unique:rooms,room_number',
             'room_type' => 'required|string|max:50',
             'description' => 'required|string',
             'photos' => 'required|string|max:255',

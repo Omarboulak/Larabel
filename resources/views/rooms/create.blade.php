@@ -49,7 +49,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="amenities" class="form-label">Amenities (separados por comas)</label>
+            <label for="amenities" class="form-label">Amenities</label>
             <input type="text" id="amenities" name="amenities" class="form-control">
         </div>
 

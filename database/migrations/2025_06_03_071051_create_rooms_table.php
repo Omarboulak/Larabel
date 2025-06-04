@@ -15,12 +15,12 @@ return new class extends Migration
             $table->integer('room_number')->primary();
             $table->string('room_type', 50);
             $table->text('description');
-            $table->string('photos', 255);
+            $table->string('photos', 200);
             $table->boolean('offer')->default(false);
             $table->decimal('price', 10, 2);
             $table->decimal('discount', 10, 2)->nullable();
             $table->text('cancellation_policy');
-            $table->string('amenities', 255);
+            $table->string('amenities', 100);
             $table->timestamps();
         });
     }
