@@ -1,0 +1,21 @@
+@use '../header';
+@use '../_cover';
+@use '../footer';
+@use '../room';
+@use '../comun';
+@use 'indexcover';
+@use 'date';
+@use 'discover';
+@use 'pickedRoom';
+@use 'luxuryPlace';
+@use 'features';
+@use 'foods';
+@use 'caracteristics';
+
+html, * { box-sizing: border-box; margin: 0; padding: 0 }
+body { min-width: 320px }
+
+.room-img{
+    width: 100%;
+    height: 100%;
+}

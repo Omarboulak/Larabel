@@ -32,15 +32,15 @@ class BookingController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $validated = $request->validate([
-            'first_Name'     => 'required|string|max:50',
-            'last_Name'      => 'required|string|max:50',
-            'orderDate'      => 'required|date',
-            'checkIn'        => 'required|date|after_or_equal:orderDate',
-            'checkOut'       => 'required|date|after:checkIn',
+            'first_Name' => 'required|string|max:50',
+            'last_Name' => 'required|string|max:50',
+            'orderDate' => 'required|date',
+            'checkIn' => 'required|date|after_or_equal:orderDate',
+            'checkOut' => 'required|date|after:checkIn',
             'specialRequest' => 'nullable|string',
-            'roomType'       => 'required|string|max:50',
-            'roomNumber'     => 'required|integer|exists:rooms,room_number',
-            'status'         => 'required|string|max:50',
+            'roomType' => 'required|string|max:50',
+            'roomNumber' => 'required|integer|exists:rooms,room_number',
+            'status' => 'required|string|max:50',
         ]);
 
         Booking::create($validated);
