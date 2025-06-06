@@ -4,65 +4,28 @@
 <div class="container">
     <h1>Editar Room</h1>
 
-    @if ($errors->any())
-      <div class="alert alert-danger">
-        <ul>
-          @foreach ($errors->all() as $msg)
-              <li>{{ $msg }}</li>
-          @endforeach
-        </ul>
-      </div>
-    @endif
-
     <form method="POST" action="{{ route('rooms.update', $room) }}">
         @csrf
         @method('PUT')
 
         <div class="mb-3">
             <label for="room_number" class="form-label">Número de Room</label>
-            <input 
-                type="number" 
-                id="room_number" 
-                name="room_number" 
-                class="form-control"
-                value="{{ old('room_number', $room->room_number) }}"
-                required
-            >
+            <input type="number" id="room_number" name="room_number" class="form-control" value="{{ old('room_number', $room->room_number) }}" required>
         </div>
 
         <div class="mb-3">
             <label for="room_type" class="form-label">Tipo</label>
-            <input 
-                type="text" 
-                id="room_type" 
-                name="room_type" 
-                class="form-control"
-                value="{{ old('room_type', $room->room_type) }}"
-                required
-            >
+            <input type="text" id="room_type" name="room_type" class="form-control" value="{{ old('room_type', $room->room_type) }}" required>
         </div>
 
         <div class="mb-3">
             <label for="description" class="form-label">Descripción</label>
-            <textarea 
-                id="description" 
-                name="description" 
-                class="form-control" 
-                rows="3"
-                required
-            >{{ old('description', $room->description) }}</textarea>
+            <textarea id="description" name="description" class="form-control" rows="3" required>{{ old('description', $room->description) }}</textarea>
         </div>
 
         <div class="mb-3">
             <label for="photos" class="form-label">Photos</label>
-            <input 
-                type="text" 
-                id="photos" 
-                name="photos" 
-                class="form-control"
-                value="{{ old('photos', $room->photos) }}"
-                required
-            >
+            <input type="text" id="photos" name="photos" class="form-control" value="{{ old('photos', $room->photos) }}" required>
         </div>
 
         <div class="form-check mb-3">

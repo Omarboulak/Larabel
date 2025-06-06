@@ -1,12 +1,8 @@
-{{-- resources/views/rooms/index.blade.php --}}
 @extends('layouts.app')
 
 @section('content')
 <div class="container">
-  <h1 class="mb-4">Listado de Rooms</h1>
-  <div class="mb-3">
-    <a href="{{ route('rooms.create') }}" class="btn btn-primary">Nueva Room</a>
-  </div>
+  <h1 class="mb-4">Listado</h1>
 
   @forelse($rooms as $room)
   <div class="d-flex justify-content-between align-items-center p-3 border rounded mb-2">
@@ -21,7 +17,7 @@
       — <strong>Descuento:</strong> {{ $room->discount }} €
       @endif
       <br>
-      <strong>Descripción:</strong> {{ Str::limit($room->description, 50) }} —
+      <strong>Descripción:</strong> {{$room->description }} —
       <strong>Amenities:</strong> {{ $room->amenities }}
     </div>
     <div class="btn-group" role="group">
@@ -30,7 +26,7 @@
       <form action="{{ route('rooms.destroy', $room->room_number) }}" method="POST" style="display:inline;">
         @csrf
         @method('DELETE')
-        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+        <button type="submit" class="btn btn-danger ">Eliminar</button>
       </form>
     </div>
   </div>

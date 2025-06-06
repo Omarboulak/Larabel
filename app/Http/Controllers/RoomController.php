@@ -45,7 +45,7 @@ class RoomController extends Controller
 
         Room::create($validated);
 
-        return redirect()->route('rooms.index')->with('success', 'Room creada correctamente.');
+        return redirect()->route('rooms.index')->with('success', 'Room create');
     }
 
     /**
@@ -85,7 +85,7 @@ class RoomController extends Controller
 
         $room->update($validated);
 
-        return redirect()->route('rooms.index')->with('success', 'Room actualizada correctamente.');
+        return redirect()->route('rooms.index')->with('success', 'Room update');
     }
 
     /**
@@ -95,6 +95,6 @@ class RoomController extends Controller
     {
          $room->delete();
 
-        return redirect()->route('rooms.index')->with('success', 'Room eliminada correctamente.');
+        return redirect()->route('rooms.index')->with('success', 'Room delete');
     }
 }
