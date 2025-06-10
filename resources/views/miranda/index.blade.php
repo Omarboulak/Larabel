@@ -24,11 +24,10 @@
 
     <nav id="nav_open" class="nav_invisible">
         <ul>
-            <li><a href="html/about.html">About Us</a></li>
-            <li><a href="html/rooms.html">Rooms</a></li>
-            <li><a href="html/offers.html">Offers</a></li>
-            <li><a href="html/contact.html">Contact</a></li>
-        </ul>
+            <li><a href="{{ route('about') }}">About Us</a></li>
+            <li><a href="{{ route('rooms') }}">Rooms</a></li>
+            <li><a href="{{ route('offers') }}">Offers</a></li>
+            <li><a href="{{ route('contact') }}">Contact</a></li>
     </nav>
 </header>
 
@@ -388,79 +387,79 @@
             <P>Projects are Completed</P>
         </div>
     </div>
-
-    <footer class="footer">
-        <div class="footer__logo">
-            <p class="footer__logo-letter">H</p>
-            <div class="footer__logo-name">
-                <p>HOTEL</p>
-                <span>MIRANDA</span>
-            </div>
-        </div><!--fin footer logo-->
-        <div class="footer__text">
-            <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut
-                labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
-            </p>
-        </div>
-
-        <div class="footer__social">
-            <img src="img/facebook.svg" alt="icono de facebook">
-            <img src="img/twiter.svg" alt="icono de twiter">
-            <img src="img/behance.svg" alt="icono de behance">
-            <img src="img/linkedin.svg" alt="icono de linkedin">
-            <img src="img/youtube.svg" alt="icono de youtube">
-        </div><!--fin social-->
-
-        <div class="footer__services">
-            <h5>Services.</h5>
-            <div class="footer__services--list">
-                <ul>
-                    <li>+ Resturent & Bar </li>
-                    <li>+ Swimming Pool </li>
-                    <li>+ Wellness & Spa </li>
-                    <li>+ Restaurant </li>
-                    <li>+ Conference Room </li>
-                    <li>+ Coctail Party House</li>
-                </ul>
-                <ul>
-                    <li>+ Gaming Zone </li>
-                    <li>+ Marrige Party </li>
-                    <li>+ Party Planning </li>
-                    <li>+ Tour Consultancy</li>
-                </ul>
-            </div>
-        </div><!--fin services-->
-
-        <div class="footer__contact">
-            <h5>Contact Us.</h5>
-            <div class="footer__contact--info">
-                <img src="img/phone.svg" alt="icono de un movil">
-                <div>
-                    <p>Phone Number </p>
-                    <p>+987 876 765 76 577</p>
-                </div>
-            </div>
-            <div class="footer__contact--info">
-                <img src="img/email.svg" alt="icono de un correo">
-                <div>
-                    <p>Phone Number </p>
-                    <p>+987 876 765 76 577</p>
-                </div>
-            </div>
-            <div class="footer__contact--info">
-                <img src="img/location.svg" alt="icono de un mapa">
-                <div>
-                    <p>Phone Number </p>
-                    <p>+987 876 765 76 577</p>
-                </div>
-            </div>
-        </div><!--fin contact-->
-
-        <div class="footer__copy">
-            <p>Copyright By@Example - 2020</p>
-            <p>Terms of use | Privacy Environmental Policy</p>
-        </div>
-    </footer>
 </main>
+<footer class="footer">
+    <div class="footer__logo">
+        <p class="footer__logo-letter">H</p>
+        <div class="footer__logo-name">
+            <p>HOTEL</p>
+            <span>MIRANDA</span>
+        </div>
+    </div><!--fin footer logo-->
+    <div class="footer__text">
+        <p>Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing eius mod tempor incididunt ut
+            labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
+        </p>
+    </div>
+
+    <div class="footer__social">
+        <img src="img/facebook.svg" alt="icono de facebook">
+        <img src="img/twiter.svg" alt="icono de twiter">
+        <img src="img/behance.svg" alt="icono de behance">
+        <img src="img/linkedin.svg" alt="icono de linkedin">
+        <img src="img/youtube.svg" alt="icono de youtube">
+    </div><!--fin social-->
+
+    <div class="footer__services">
+        <h5>Services.</h5>
+        <div class="footer__services--list">
+            <ul>
+                <li>+ Resturent & Bar </li>
+                <li>+ Swimming Pool </li>
+                <li>+ Wellness & Spa </li>
+                <li>+ Restaurant </li>
+                <li>+ Conference Room </li>
+                <li>+ Coctail Party House</li>
+            </ul>
+            <ul>
+                <li>+ Gaming Zone </li>
+                <li>+ Marrige Party </li>
+                <li>+ Party Planning </li>
+                <li>+ Tour Consultancy</li>
+            </ul>
+        </div>
+    </div><!--fin services-->
+
+    <div class="footer__contact">
+        <h5>Contact Us.</h5>
+        <div class="footer__contact--info">
+            <img src="img/phone.svg" alt="icono de un movil">
+            <div>
+                <p>Phone Number </p>
+                <p>+987 876 765 76 577</p>
+            </div>
+        </div>
+        <div class="footer__contact--info">
+            <img src="img/email.svg" alt="icono de un correo">
+            <div>
+                <p>Phone Number </p>
+                <p>+987 876 765 76 577</p>
+            </div>
+        </div>
+        <div class="footer__contact--info">
+            <img src="img/location.svg" alt="icono de un mapa">
+            <div>
+                <p>Phone Number </p>
+                <p>+987 876 765 76 577</p>
+            </div>
+        </div>
+    </div><!--fin contact-->
+
+    <div class="footer__copy">
+        <p>Copyright By@Example - 2020</p>
+        <p>Terms of use | Privacy Environmental Policy</p>
+    </div>
+</footer>
+
 @endsection

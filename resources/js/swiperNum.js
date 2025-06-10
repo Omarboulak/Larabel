@@ -1,24 +1,28 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const swiper = new Swiper('.swiper', {
-        direction: 'horizontal',
-        loop: true,
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '">' + (index + 1) + '</span>';
-            },
-            renderCustom: function (swiper, current, total) {
-                return current + ' of ' + total;
-            }
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.swiper-num').forEach((el) => {
+    new Swiper(el, {
+      direction: 'horizontal',
+      loop: true,
+
+      pagination: {
+        el: el.querySelector('.swiper-pagination'),
+        clickable: true,
+        renderBullet(index, className) {
+          return `<span class="${className}">${index + 1}</span>`;
         },
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+        renderCustom(swiper, current, total) {
+          return `${current} of ${total}`;
         },
+      },
 
+      navigation: {
+        nextEl: el.querySelector('.swiper-button-next'),
+        prevEl: el.querySelector('.swiper-button-prev'),
+      },
     });
+  });
 });
