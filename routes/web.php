@@ -9,11 +9,11 @@
     });
 
 
-    Route::resource('rooms', ActivityController::class);
-    Route::resource('rooms', RoomController::class);
+    Route::resource('activities', ActivityController::class);
+    Route::get('/rooms', [RoomController::class, 'index'])->name('rooms.index');
 
     Route::view('/', 'miranda.index')->name('home');
-    Route::view('/rooms', 'miranda.rooms')->name('rooms');
+    // Route::view('/rooms', 'miranda.rooms')->name('rooms');
     Route::view('/about', 'miranda.about')->name('about');
     Route::view('/offers', 'miranda.offers')->name('offers');
     Route::view('/contact', 'miranda.contact')->name('contact');

@@ -25,7 +25,7 @@
     <nav id="nav_open" class="nav_invisible">
         <ul>
             <li><a href="{{ route('about') }}">About Us</a></li>
-            <li><a href="{{ route('rooms') }}">Rooms</a></li>
+            <li><a href="{{ route('rooms.index') }}">Rooms</a></li>
             <li><a href="{{ route('offers') }}">Offers</a></li>
             <li><a href="{{ route('contact') }}">Contact</a></li>
     </nav>

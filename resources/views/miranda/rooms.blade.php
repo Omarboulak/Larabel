@@ -23,7 +23,7 @@
     <nav id="nav_open" class="nav_invisible">
         <ul>
             <li><a href="{{ route('about') }}">About Us</a></li>
-            <li><a href="{{ route('rooms') }}">Rooms</a></li>
+            <li><a href="{{ route('rooms.index') }}">Rooms</a></li>
             <li><a href="{{ route('offers') }}">Offers</a></li>
             <li><a href="{{ route('contact') }}">Contact</a></li>
         </ul>
@@ -43,240 +43,28 @@
         <div class="swiper">
             <div class="swiper-wrapper">
 
+                @foreach($rooms as $room)
                 <div class="swiper-slide">
                     <div class="room">
                         <div class="room__img">
-                            <img src="')}}" alt="">
+                            <img src="{{ asset('img/rooms/' . $room->photos) }}" alt="Foto de habitacion">
 
                             <div class="room__information">
-                                <img src="{{ asset('img/bed.svg')}}" alt="icono de una cama">
-                                <img src="{{ asset('img/wifi.svg')}}" alt="icono de wifi">
-                                <img src="{{ asset('img/car.svg')}}" alt="icono de coche">
-                                <img src="{{ asset('img/snow.svg')}}" alt="icono de un copo de nieve">
-                                <img src="{{ asset('img/gym.svg')}}" alt="icono de una pesa">
-                                <img src="{{ asset('img/smoking.svg')}}" alt="icono de un cigarro tachado">
-                                <img src="{{ asset('img/drink.svg')}}" alt="icono de una bebida">
+                                <img src="{{ asset('img/bed.svg') }}" alt="icono cama">
+                                <img src="{{ asset('img/wifi.svg') }}" alt="icono wifi">
+                                <img src="{{ asset('img/car.svg') }}" alt="icono coche">
+                                <img src="{{ asset('img/snow.svg') }}" alt="icono nieve">
+                                <img src="{{ asset('img/gym.svg') }}" alt="icono gym">
+                                <img src="{{ asset('img/smoking.svg') }}" alt="icono no fumar">
+                                <img src="{{ asset('img/drink.svg') }}" alt="icono bebida">
                             </div>
                         </div>
-                        <h4>Minimal Duplex Room</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                        <p class="room__price">$345/Night <span>Booking Now</span></p>
-                    </div>
-
-                    <div class="room">
-                        <div class="room__img">
-                            <img src="')}}" alt="">
-
-                            <div class="room__information">
-                                <img src="{{ asset('img/bed.svg')}}" alt="icono de una cama">
-                                <img src="{{ asset('img/wifi.svg')}}" alt="icono de wifi">
-                                <img src="{{ asset('img/car.svg')}}" alt="icono de coche">
-                                <img src="{{ asset('img/snow.svg')}}" alt="icono de un copo de nieve">
-                                <img src="{{ asset('img/gym.svg')}}" alt="icono de una pesa">
-                                <img src="{{ asset('img/smoking.svg')}}" alt="icono de un cigarro tachado">
-                                <img src="{{ asset('img/drink.svg')}}" alt="icono de una bebida">
-                            </div>
-                        </div>
-                        <h4>Minimal Duplex Room</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                        <p class="room__price">$345/Night <span>Booking Now</span></p>
-                    </div>
-
-                    <div class="room">
-                        <div class="room__img">
-                            <img src="')}}" alt="">
-
-                            <div class="room__information">
-                                <img src="{{ asset('img/bed.svg')}}" alt="icono de una cama">
-                                <img src="{{ asset('img/wifi.svg')}}" alt="icono de wifi">
-                                <img src="{{ asset('img/car.svg')}}" alt="icono de coche">
-                                <img src="{{ asset('img/snow.svg')}}" alt="icono de un copo de nieve">
-                                <img src="{{ asset('img/gym.svg')}}" alt="icono de una pesa">
-                                <img src="{{ asset('img/smoking.svg')}}" alt="icono de un cigarro tachado">
-                                <img src="{{ asset('img/drink.svg')}}" alt="icono de una bebida">
-                            </div>
-                        </div>
-                        <h4>Minimal Duplex Room</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                        <p class="room__price">$345/Night <span>Booking Now</span></p>
-                    </div>
-
-                    <div class="room">
-                        <div class="room__img">
-                            <img src="')}}" alt="">
-
-                            <div class="room__information">
-                                <img src="{{ asset('img/bed.svg')}}" alt="icono de una cama">
-                                <img src="{{ asset('img/wifi.svg')}}" alt="icono de wifi">
-                                <img src="{{ asset('img/car.svg')}}" alt="icono de coche">
-                                <img src="{{ asset('img/snow.svg')}}" alt="icono de un copo de nieve">
-                                <img src="{{ asset('img/gym.svg')}}" alt="icono de una pesa">
-                                <img src="{{ asset('img/smoking.svg')}}" alt="icono de un cigarro tachado">
-                                <img src="{{ asset('img/drink.svg')}}" alt="icono de una bebida">
-                            </div>
-                        </div>
-                        <h4>Minimal Duplex Room</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                        <p class="room__price">$345/Night <span>Booking Now</span></p>
-                    </div>
-
-                    <div class="room">
-                        <div class="room__img">
-                            <img src="')}}" alt="">
-
-                            <div class="room__information">
-                                <img src="{{ asset('img/bed.svg')}}" alt="icono de una cama">
-                                <img src="{{ asset('img/wifi.svg')}}" alt="icono de wifi">
-                                <img src="{{ asset('img/car.svg')}}" alt="icono de coche">
-                                <img src="{{ asset('img/snow.svg')}}" alt="icono de un copo de nieve">
-                                <img src="{{ asset('img/gym.svg')}}" alt="icono de una pesa">
-                                <img src="{{ asset('img/smoking.svg')}}" alt="icono de un cigarro tachado">
-                                <img src="{{ asset('img/drink.svg')}}" alt="icono de una bebida">
-                            </div>
-                        </div>
-                        <h4>Minimal Duplex Room</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                        <p class="room__price">$345/Night <span>Booking Now</span></p>
-                    </div>
-
-                    <div class="room">
-                        <div class="room__img">
-                            <img src="')}}" alt="">
-
-                            <div class="room__information">
-                                <img src="{{ asset('img/bed.svg')}}" alt="icono de una cama">
-                                <img src="{{ asset('img/wifi.svg')}}" alt="icono de wifi">
-                                <img src="{{ asset('img/car.svg')}}" alt="icono de coche">
-                                <img src="{{ asset('img/snow.svg')}}" alt="icono de un copo de nieve">
-                                <img src="{{ asset('img/gym.svg')}}" alt="icono de una pesa">
-                                <img src="{{ asset('img/smoking.svg')}}" alt="icono de un cigarro tachado">
-                                <img src="{{ asset('img/drink.svg')}}" alt="icono de una bebida">
-                            </div>
-                        </div>
-                        <h4>Minimal Duplex Room</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                        <p class="room__price">$345/Night <span>Booking Now</span></p>
+                        <h4>{{ $room->room_type }}</h4>
+                        <p>{{ $room->description }}</p>
+                        <p class="room__price">${{ $room->price }}<span>Booking Now</span></p>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="room">
-                        <div class="room__img">
-                            <img src="')}}" alt="">
-
-                            <div class="room__information">
-                                <img src="{{ asset('img/bed.svg')}}" alt="icono de una cama">
-                                <img src="{{ asset('img/wifi.svg')}}" alt="icono de wifi">
-                                <img src="{{ asset('img/car.svg')}}" alt="icono de coche">
-                                <img src="{{ asset('img/snow.svg')}}" alt="icono de un copo de nieve">
-                                <img src="{{ asset('img/gym.svg')}}" alt="icono de una pesa">
-                                <img src="{{ asset('img/smoking.svg')}}" alt="icono de un cigarro tachado">
-                                <img src="{{ asset('img/drink.svg')}}" alt="icono de una bebida">
-                            </div>
-                        </div>
-                        <h4>Minimal Duplex Room</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                        <p class="room__price">$345/Night <span>Booking Now</span></p>
-                    </div>
-
-                    <div class="room">
-                        <div class="room__img">
-                            <img src="')}}" alt="">
-
-                            <div class="room__information">
-                                <img src="{{ asset('img/bed.svg')}}" alt="icono de una cama">
-                                <img src="{{ asset('img/wifi.svg')}}" alt="icono de wifi">
-                                <img src="{{ asset('img/car.svg')}}" alt="icono de coche">
-                                <img src="{{ asset('img/snow.svg')}}" alt="icono de un copo de nieve">
-                                <img src="{{ asset('img/gym.svg')}}" alt="icono de una pesa">
-                                <img src="{{ asset('img/smoking.svg')}}" alt="icono de un cigarro tachado">
-                                <img src="{{ asset('img/drink.svg')}}" alt="icono de una bebida">
-                            </div>
-                        </div>
-                        <h4>Minimal Duplex Room</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                        <p class="room__price">$345/Night <span>Booking Now</span></p>
-                    </div>
-
-                    <div class="room">
-                        <div class="room__img">
-                            <img src="')}}" alt="">
-
-                            <div class="room__information">
-                                <img src="{{ asset('img/bed.svg')}}" alt="icono de una cama">
-                                <img src="{{ asset('img/wifi.svg')}}" alt="icono de wifi">
-                                <img src="{{ asset('img/car.svg')}}" alt="icono de coche">
-                                <img src="{{ asset('img/snow.svg')}}" alt="icono de un copo de nieve">
-                                <img src="{{ asset('img/gym.svg')}}" alt="icono de una pesa">
-                                <img src="{{ asset('img/smoking.svg')}}" alt="icono de un cigarro tachado">
-                                <img src="{{ asset('img/drink.svg')}}" alt="icono de una bebida">
-                            </div>
-                        </div>
-                        <h4>Minimal Duplex Room</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                        <p class="room__price">$345/Night <span>Booking Now</span></p>
-                    </div>
-
-                    <div class="room">
-                        <div class="room__img">
-                            <img src="')}}" alt="">
-
-                            <div class="room__information">
-                                <img src="{{ asset('img/bed.svg')}}" alt="icono de una cama">
-                                <img src="{{ asset('img/wifi.svg')}}" alt="icono de wifi">
-                                <img src="{{ asset('img/car.svg')}}" alt="icono de coche">
-                                <img src="{{ asset('img/snow.svg')}}" alt="icono de un copo de nieve">
-                                <img src="{{ asset('img/gym.svg')}}" alt="icono de una pesa">
-                                <img src="{{ asset('img/smoking.svg')}}" alt="icono de un cigarro tachado">
-                                <img src="{{ asset('img/drink.svg')}}" alt="icono de una bebida">
-                            </div>
-                        </div>
-                        <h4>Minimal Duplex Room</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                        <p class="room__price">$345/Night <span>Booking Now</span></p>
-                    </div>
-
-                    <div class="room">
-                        <div class="room__img">
-                            <img src="" alt="">
-
-                            <div class="room__information">
-                                <img src="{{ asset('img/bed.svg')}}" alt="icono de una cama">
-                                <img src="{{ asset('img/wifi.svg ')}}" alt="icono de wifi">
-                                <img src="{{ asset('img/car.svg')}}" alt="icono de coche">
-                                <img src="{{ asset('img/snow.svg')}}" alt="icono de un copo de nieve">
-                                <img src="{{ asset('img/gym.svg')}}" alt="icono de una pesa">
-                                <img src="{{ asset('img/smoking.svg')}}" alt="icono de un cigarro tachado">
-                                <img src="{{ asset('img/drink.svg')}}" alt="icono de una bebida">
-                            </div>
-                        </div>
-                        <h4>Minimal Duplex Room</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                        <p class="room__price">$345/Night <span>Booking Now</span></p>
-                    </div>
-
-                    <div class="room">
-                        <div class="room__img">
-                            <img src="" alt="">
-
-                            <div class="room__information">
-                                <img src="{{ asset('img/bed.svg')}}" alt="icono de una cama">
-                                <img src="{{ asset('img/wifi.svg')}}" alt="icono de wifi">
-                                <img src="{{ asset('img/car.svg')}}" alt="icono de coche">
-                                <img src="{{ asset('img/snow.svg')}}" alt="icono de un copo de nieve">
-                                <img src="{{ asset('img/gym.svg')}}" alt="icono de una pesa">
-                                <img src="{{ asset('img/smoking.svg')}}" alt="icono de un cigarro tachado">
-                                <img src="{{ asset('img/drink.svg')}}" alt="icono de una bebida">
-                            </div>
-                        </div>
-                        <h4>Minimal Duplex Room</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-                        <p class="room__price">$345/Night <span>Booking Now</span></p>
-                    </div>
-                </div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
-                <div class="swiper-slide"></div>
+                @endforeach
 
             </div>
 
