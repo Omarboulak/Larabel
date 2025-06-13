@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     new Swiper(el, {
       direction: 'horizontal',
       loop: true,
+      slidesPerView: 4,
+      slidesPerGroup: 4,  
 
       pagination: {
         el: el.querySelector('.swiper-pagination'),

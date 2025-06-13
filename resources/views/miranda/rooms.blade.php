@@ -40,7 +40,7 @@
     </div> <!-- fin cover-->
 
     <div class="info-rooms">
-        <div class="swiper">
+        <div class="swiper swiper-num">
             <div class="swiper-wrapper">
 
                 @foreach($rooms as $room)

@@ -1,8 +1,6 @@
-// Importa el bundle completo (JS + CSS en un solo sitio)
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
-// Inicialización
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.swiper').forEach((el) => {
     new Swiper(el, {
