@@ -27,7 +27,7 @@
             <li><a href="{{ route('about') }}">About Us</a></li>
             <li><a href="{{ route('rooms.index') }}">Rooms</a></li>
             <li><a href="{{ route('offers') }}">Offers</a></li>
-            <li><a href="{{ route('contact') }}">Contact</a></li>
+            <li><a href="{{ route('contact.create') }}">Contact</a></li>
     </nav>
 </header>
 
@@ -65,7 +65,6 @@
             <img src="img/index/team.svg" alt="icono de personas">
             <p class="discover__team__strong">Strong Team</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-
         </div>
 
         <div class="discover__luxury">

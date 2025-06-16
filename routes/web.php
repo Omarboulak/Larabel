@@ -3,6 +3,7 @@
     use Illuminate\Support\Facades\Route;
     use App\Http\Controllers\ActivityController;
     use App\Http\Controllers\RoomController;
+    use App\Http\Controllers\ContactController;
 
     Route::get('/', function () {
         return view('miranda.index');
@@ -17,3 +18,7 @@
     Route::view('/about', 'miranda.about')->name('about');
     Route::view('/offers', 'miranda.offers')->name('offers');
     Route::view('/contact', 'miranda.contact')->name('contact');
+
+
+    Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
+
