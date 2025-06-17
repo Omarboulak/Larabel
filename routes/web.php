@@ -17,8 +17,7 @@
     // Route::view('/rooms', 'miranda.rooms')->name('rooms');
     Route::view('/about', 'miranda.about')->name('about');
     Route::view('/offers', 'miranda.offers')->name('offers');
-    Route::view('/contact', 'miranda.contact')->name('contact');
 
 
     Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
-
+    Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
