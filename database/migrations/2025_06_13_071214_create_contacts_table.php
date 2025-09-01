@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('booking_id')->nullable();
-            $table->date('date');
             $table->string('first_name', 100);
             $table->string('last_name', 100);
             $table->string('email', 150);
