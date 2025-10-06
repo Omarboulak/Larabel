@@ -10,7 +10,7 @@ class Contact extends Model
      use HasFactory;
 
     protected $fillable = [
-        'booking_id', 'first_name', 'last_name', 'email', 'phone', 'subject','comment', 'archive',
+        'first_name', 'email', 'phone', 'subject', 'comment'
     ];
 
     public function booking()

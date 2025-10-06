@@ -73,7 +73,24 @@
 
     <div class="hotelImg"></div>
 
+    @if(session('success'))
+    <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
 
+    @if(session('error'))
+    <div class="alert alert-danger">{{ session('error') }}</div>
+    @endif
+
+    @if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach($errors->all() as $err)
+            <li>{{ $err }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+    
     <div class="form">
         <form action="{{ route('contact.store') }}" method="POST">
             @csrf

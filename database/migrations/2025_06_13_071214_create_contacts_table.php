@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('booking_id')->nullable();
             $table->string('first_name', 100);
-            $table->string('last_name', 100);
+            $table->string('last_name', 100)->nullable();
             $table->string('email', 150);
             $table->string('phone', 20)->nullable();
             $table->string('subject', 255)->nullable();
