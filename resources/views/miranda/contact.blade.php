@@ -26,10 +26,11 @@
 
     <nav id="nav_open" class="nav_invisible">
         <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="rooms.html">Rooms</a></li>
-            <li><a href="offers.html">Offers</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="{{ route('about') }}">About Us</a></li>
+            <li><a href="{{ route('rooms.index') }}">Rooms</a></li>
+            <li><a href="{{ route('offers') }}">Offers</a></li>
+            <li><a href="{{ route('contact.create') }}">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -90,7 +91,7 @@
         </ul>
     </div>
     @endif
-    
+
     <div class="form">
         <form action="{{ route('contact.store') }}" method="POST">
             @csrf

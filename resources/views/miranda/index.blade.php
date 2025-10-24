@@ -28,6 +28,7 @@
             <li><a href="{{ route('rooms.index') }}">Rooms</a></li>
             <li><a href="{{ route('offers') }}">Offers</a></li>
             <li><a href="{{ route('contact.create') }}">Contact</a></li>
+        </ul>
     </nav>
 </header>
 

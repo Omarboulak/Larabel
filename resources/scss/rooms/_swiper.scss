@@ -36,4 +36,12 @@
         top: inherit;
         bottom: 0;
     }
+
+    .swiper-slide{
+        width: 100% !important;
+    }
+
+    .swiper-wrapper{
+        display: block;
+    }
 }
